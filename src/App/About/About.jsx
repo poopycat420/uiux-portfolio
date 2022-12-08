@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+// import Avatar from "../../assets/avatar.png";
+
 const StyledAbout = styled.div`
   height: 100vh;
   display: flex;
@@ -15,10 +17,13 @@ export const About = ({ id }) => {
     <StyledAbout id={id}>
       <div>
         <h1>Hi World, I'm PoopyCat</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, modi.
-        Fugiat eos assumenda quos commodi quae quasi, culpa dolorem tempore
-        similique magnam nisi dolores est voluptates doloremque omnis, sed
-        laboriosam.</p>
+        <p>
+          I'm a frontend developer with experience in UI/UX design and a current
+          senior at Brown University. I love creating experiences that impress
+          users and keep them engaged while also providing them with tangible
+          benefits. You can see more about my work below or you can contact me
+          via email, LinkedIn, or check my Github.
+        </p>
       </div>
     </StyledAbout>
   );
