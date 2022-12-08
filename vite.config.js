@@ -4,7 +4,7 @@ import babel from "vite-plugin-babel";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/portfolio/",
+  base: "/uiux-portfolio/",
   plugins: [
     react(),
     babel({
