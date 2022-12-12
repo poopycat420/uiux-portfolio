@@ -1,62 +1,56 @@
 import styled from "styled-components";
-
-const SIDEBAR_WIDTH = 20;
+import { PageSection } from "./PageSection";
+import { Sidebar } from "./Sidebar";
 
 const LayoutGrid = styled.div`
   display: grid;
-  grid-template-columns: ${`${SIDEBAR_WIDTH}%`} 80%;
+  grid-template-columns: 20% 80%;
   position: relative;
 `;
 
-const StyledSidebar = styled.div`
-  height: 100%;
-  width: 100%;
-  position: relative;
+const StyledMain = styled.main`
+  background-color: ${(props) => props.theme.color2};
+  color: ${(props) => props.theme.color4};
 `;
 
-const SidebarInnerContainer = styled.div`
-  background-color: ${(props) => props.theme.color4};
-  color: ${(props) => props.theme.color1};
+const StyledLanding = styled.div`
   height: 100vh;
-  width: 100%;
-  position: sticky;
-  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-`
-
-const NavList = styled.nav`
-  width: 100%;
-  text-align: center;
+  background-color: ${(props) => props.theme.color1};
+  color: ${(props) => props.theme.color4};
+  padding: 10%;
 `;
 
-const NavLink = styled.div`
-  &:hover {
-    background-color: ${props => props.theme.color1};
-    color: ${props => props.theme.color4};
-  }
-
-  padding: 20px;
-  transition: background-color 0.75s, color 0.75s;
-`
-
-// navLinks => [{ label: string, id: string }]
-export const SidebarLayout = ({ navLinks, children }) => {
+// sections => [{ label: string, id: string, element, }]
+// beginning => { label: string, id: string }
+export const SidebarLayout = ({ title, description, sections, beginning }) => {
   return (
     <LayoutGrid>
-      <StyledSidebar>
-        <SidebarInnerContainer>
-          <NavList>
-            {navLinks.map(({ label, id }) => (
-              <a href={"#" + id} key={id}>
-                <NavLink>{label}</NavLink>
-              </a>
-            ))}
-          </NavList>
-        </SidebarInnerContainer>
-      </StyledSidebar>
-      {children}
+      <Sidebar
+        navLinks={[beginning].concat(
+          sections.map((section) => ({
+            label: section.label,
+            id: section.id,
+          }))
+        )}
+      />
+      <StyledMain>
+        <StyledLanding id={beginning.id}>
+          <div>
+            <h1>{title}</h1>
+            <p>{description}</p>
+          </div>
+        </StyledLanding>
+        {sections.map((section, index) => {
+          console.log(section);
+          return <PageSection key={index} id={section.id}>
+            {section.element}
+          </PageSection>
+        }
+        )}
+      </StyledMain>
     </LayoutGrid>
   );
 };

@@ -1,10 +1,10 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const BORDER_RADIUS = "30px";
 
 const StyledProjectCard = styled.div`
-max-width: 30vw;
-  /* background-color: ${(props) => props.theme.color1}; */
+  max-width: 30vw;
 `;
 
 const CardImage = styled.img`
@@ -26,13 +26,18 @@ const CardText = styled.div`
   font-size: 0.8rem;
 `;
 
-export const ProjectCard = ({ name, description, link, image }) => {
-  console.log(image);
+export const ProjectCard = ({ name, description, link, image, path }) => {
   return (
     <StyledProjectCard>
-      <a href={link} target="_blank">
-        <CardImage src={image} />
-      </a>
+      {path ? (
+        <Link to={path}>
+          <CardImage src={image} />
+        </Link>
+      ) : (
+        <a href={link} target="_blank">
+          <CardImage src={image} />
+        </a>
+      )}
       <CardText>
         <strong>{name}</strong>
         <p>{description}</p>
