@@ -1,9 +1,7 @@
 import "./App.css";
-import { SidebarLayout } from "./SidebarLayout/SidebarLayout";
 import { ThemeProvider } from "styled-components";
-import { About } from "./About/About";
-import { Projects } from "./Projects/Projects";
-import styled from 'styled-components';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Homepage } from "./Pages/Homepage/Homepage";
 
 const theme = {
   color1: "#F9F7F7",
@@ -12,28 +10,21 @@ const theme = {
   color4: "#112D4E",
 };
 
-const StyledMain = styled.main`
-  background-color: ${theme.color1};
-  color: ${theme.color4};
-`
+const Themed = ({element}) => {
+  return (
+    <ThemeProvider theme={theme}>
+      {element}
+    </ThemeProvider>
+  )
+}
 
 function App() {
-  const navLinks = [
-    { label: "about", id: "About" },
-    { label: "projects", id: "Projects" },
-  ];
-
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <SidebarLayout navLinks={navLinks}>
-          <StyledMain>
-            <About id="About" />
-            <Projects id="Projects" />
-          </StyledMain>
-        </SidebarLayout>
-      </ThemeProvider>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Themed element={<Homepage />} />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

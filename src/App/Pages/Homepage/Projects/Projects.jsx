@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { ProjectCard } from "./ProjectCard/ProjectCard";
 
 // Images
-import DevelopmentImg from "../../assets/calisthenics-pal.png";
-import PersonasImg from "../../assets/personas-storyboarding.png";
-import RedesignImg from "../../assets/responsive-redesign.png";
-import IterativeImg from "../../assets/iterative-design.png";
+import DevelopmentImg from "../../../../assets/calisthenics-pal.png";
+import PersonasImg from "../../../../assets/personas-storyboarding.png";
+import RedesignImg from "../../../../assets/responsive-redesign.png";
+import IterativeImg from "../../../../assets/iterative-design.png";
 
 const StyledProjects = styled.div`
   min-height: 100vh;

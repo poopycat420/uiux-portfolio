@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-// import Avatar from "../../assets/avatar.png";
+import Avatar from "../../../../assets/avatar.png";
 
 const StyledAbout = styled.div`
   height: 100vh;
