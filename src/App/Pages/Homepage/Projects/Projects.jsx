@@ -32,6 +32,7 @@ const projects = [
     description: "",
     link: "https://poopycat420.github.io/responsive-redesign/",
     image: RedesignImg,
+    path: '/redesign',
   },
   {
     name: "Calisthenics Pal",

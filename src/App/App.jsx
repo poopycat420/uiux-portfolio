@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Homepage } from "./Pages/Homepage/Homepage";
 import { Personas } from "./Pages/Personas/Personas";
+import { Redesign } from "./Pages/Redesign/Redesign";
 
 const theme = {
   color1: "#F9F7F7",
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Themed element={<Homepage />} />} />
         <Route path="/personas" element={<Themed element={<Personas />} />} />
+        <Route path="/redesign" element={<Themed element={<Redesign />} />} />
       </Routes>
     </BrowserRouter>
   );
