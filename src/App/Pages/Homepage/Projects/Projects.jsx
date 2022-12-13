@@ -5,10 +5,9 @@ import { ProjectCard } from "./ProjectCard/ProjectCard";
 import DevelopmentImg from "../../../../assets/calisthenics-pal.png";
 import PersonasImg from "../../../../assets/personas.png";
 import RedesignImg from "../../../../assets/responsive-redesign.png";
+import IterativeImg from '../../../../assets/iterative.png';
 
 const StyledProjects = styled.div`
-  /* min-height: 100vh; */
-  /* padding: 10%; */
 `;
 
 const ProjectsContainer = styled.div`
@@ -22,23 +21,26 @@ const projects = [
   {
     name: "UI/UX Principles in Everyday Objects",
     description: "",
-    link: "https://poopycat420.github.io/personas-storyboards/",
     image: PersonasImg,
     path: '/personas',
   },
   {
     name: "Williamsburg Urgent Care Redesign",
     description: "",
-    link: "https://poopycat420.github.io/responsive-redesign/",
     image: RedesignImg,
     path: '/redesign',
   },
   {
     name: "Calisthenics Pal",
     description: "",
-    link: "https://poopycat420.github.io/calisthenics-pal/",
     image: DevelopmentImg,
     path: '/calisthenics-pal',
+  },
+  {
+    name: "Iterative App Design",
+    description: "",
+    image: IterativeImg,
+    path: '/iterative',
   },
 ];
 // https://github.com/sleepysloth123/iterative

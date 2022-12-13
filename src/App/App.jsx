@@ -5,6 +5,7 @@ import { Homepage } from "./Pages/Homepage/Homepage";
 import { Personas } from "./Pages/Personas/Personas";
 import { Redesign } from "./Pages/Redesign/Redesign";
 import { Development } from "./Pages/Development/Development";
+import { Iterative } from "./Pages/Iterative/Iterative";
 
 const theme = {
   color1: "#F9F7F7",
@@ -25,6 +26,7 @@ function App() {
         <Route path="/personas" element={<Themed element={<Personas />} />} />
         <Route path="/redesign" element={<Themed element={<Redesign />} />} />
         <Route path="/calisthenics-pal" element={<Themed element={<Development />} />} />
+        <Route path="/iterative" element={<Themed element={<Iterative />} />} />
       </Routes>
     </BrowserRouter>
   );
