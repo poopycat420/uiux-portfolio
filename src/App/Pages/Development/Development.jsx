@@ -2,15 +2,18 @@ import styled from "styled-components";
 import { SidebarLayout } from "../../shared/SidebarLayout/SidebarLayout";
 import { StyledA } from "../../shared/StyledA";
 
+// Image
+import CalisthenicsPalImg from "../../../assets/calisthenics-pal.png";
+
 const title = "Calisthenics Pal";
 const description =
   "Can I create an app that calisthenics practicioners will actually want to use?";
-const beginning = { label: "intro", id: "intro" };
+const beginning = { label: "top", id: "top" };
 
 const sections = [
   {
-    label: "motivations",
-    id: "motivations",
+    label: "motivation",
+    id: "motivation",
     element: (
       <>
         <h2>Motivations behind the project</h2>
@@ -31,8 +34,9 @@ const sections = [
             link={
               "https://docs.google.com/spreadsheets/u/1/d/19l4tVfdTJLheLMwZBYqcw1oeEBPRh8mxngqrCz2YnVg/edit"
             }
-            label={"this spreadsheet"}
-          />
+          >
+            this spreadsheet
+          </StyledA>
           ). I chose 12 exercises from the sheet and noted the key muscle group
           used in the exercise (the 'focus') as well as the difficulty.
         </p>
@@ -134,6 +138,11 @@ export const Development = () => {
       description={description}
       beginning={beginning}
       sections={sections}
+      italicize={true}
+      imageLink={{
+        image: CalisthenicsPalImg,
+        link: "https://poopycat420.github.io/calisthenics-pal/",
+      }}
     />
   );
 };

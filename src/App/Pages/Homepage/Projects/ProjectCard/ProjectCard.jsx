@@ -4,8 +4,8 @@ import styled from "styled-components";
 const BORDER_RADIUS = "30px";
 
 const scrollToTop = () => {
-  window.scrollTo(0, 0)
-}
+  window.scrollTo(0, 0);
+};
 
 const StyledProjectCard = styled.div`
   max-width: 30vw;
@@ -30,22 +30,16 @@ const CardText = styled.div`
   font-size: 0.8rem;
 `;
 
-export const ProjectCard = ({ name, description, link, image, path }) => {
+export const ProjectCard = ({ name, description, image, path }) => {
   return (
-    <StyledProjectCard>
-      {path ? (
-        <Link onClick={scrollToTop} to={path}>
-          <CardImage src={image} />
-        </Link>
-      ) : (
-        <a href={link} target="_blank">
-          <CardImage src={image} />
-        </a>
-      )}
-      <CardText>
-        <strong>{name}</strong>
-        <p>{description}</p>
-      </CardText>
-    </StyledProjectCard>
+    <Link onClick={scrollToTop} to={path}>
+      <StyledProjectCard>
+        <CardImage src={image} />
+        <CardText>
+          <strong>{name}</strong>
+          <p>{description}</p>
+        </CardText>
+      </StyledProjectCard>
+    </Link>
   );
 };

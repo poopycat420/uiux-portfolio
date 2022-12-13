@@ -16,6 +16,7 @@ const StyledMain = styled.main`
 const StyledLanding = styled.div`
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: ${(props) => props.theme.color1};
@@ -23,9 +24,29 @@ const StyledLanding = styled.div`
   padding: 10% 5vw;
 `;
 
+const MainImage = styled.img`
+  height: 50vh;
+  border-radius: 20px;
+  max-width: 100%;
+  margin: 2rem;
+
+  &:hover {
+    height: 55vh;
+  }
+
+  transition: height 1s;
+`;
+
 // sections => [{ label: string, id: string, element, }]
 // beginning => { label: string, id: string }
-export const SidebarLayout = ({ title, description, sections, beginning }) => {
+export const SidebarLayout = ({
+  title,
+  description,
+  sections,
+  beginning,
+  italicize,
+  imageLink,
+}) => {
   return (
     <LayoutGrid id="top">
       <Sidebar
@@ -38,9 +59,18 @@ export const SidebarLayout = ({ title, description, sections, beginning }) => {
       />
       <StyledMain>
         <StyledLanding id={beginning.id}>
+          {imageLink && (
+            <a href={imageLink.link} target="_blank">
+              <MainImage src={imageLink.image} />
+            </a>
+          )}
           <div>
             <h1>{title}</h1>
-            <p style={{ fontStyle: "italic" }}>{description}</p>
+            {italicize ? (
+              <p style={{ fontStyle: "italic" }}>{description}</p>
+            ) : (
+              <p>{description}</p>
+            )}
           </div>
         </StyledLanding>
         {sections.map((section, index) => (

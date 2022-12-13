@@ -293,6 +293,8 @@ export const Redesign = () => {
       description={description}
       beginning={beginning}
       sections={sections}
+      italicize={true}
+      imageLink={{image: FinalSite, link: 'https://poopycat420.github.io/redesigned-page/'}}
     />
   );
 };

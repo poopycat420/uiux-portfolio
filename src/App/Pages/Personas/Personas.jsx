@@ -7,6 +7,8 @@ import Persona1 from "./images/persona-1.png";
 import Persona2 from "./images/persona-2.png";
 import Storyboard from "./images/storyboard.png";
 
+import MainPhoto from "../../../assets/personas.png";
+
 const title = "Studying User Stories through Printers";
 const description = "How can we understand users through everyday interfaces?";
 const beginning = { label: "top", id: "top" };
@@ -21,26 +23,25 @@ const ImageContainer = styled.div`
 
 const PersonaImg = styled.img`
   max-height: 70vh;
-`
+`;
 const sections = [
   {
     label: "motivation",
     id: "motivation",
     element: (
       <>
-      <h1>Motivation</h1>
-      <p>
-      Empathizing with users is a crucial part of the design process, even
-for everyday interfaces like washing machines and microwaves. In
-Brown University's Sciences Library (better known as the SciLi), the
-printers available can be used as an example of a user-facing
-interface from which we can conduct research as well as create
-personas and storyboards. The following page walks through an
-exercise in understanding users and their relationships to the
-printers.
-      </p>
+        <h2>Motivation</h2>
+        <p>
+          Empathizing with users is a crucial part of the design process, even
+          for everyday interfaces like washing machines and microwaves. In Brown
+          University's Sciences Library (better known as the SciLi), the
+          printers available can be used as an example of a user-facing
+          interface from which we can conduct research as well as create
+          personas and storyboards. The following page walks through an exercise
+          in understanding users and their relationships to the printers.
+        </p>
       </>
-    )
+    ),
   },
   {
     label: "a closer look",
@@ -55,7 +56,7 @@ printers.
           from the tray.
         </p>
         <ImageContainer>
-            <img id="diagram-img" src={PrinterDiagram} />
+          <img id="diagram-img" src={PrinterDiagram} />
         </ImageContainer>
       </>
     ),
@@ -263,6 +264,8 @@ export const Personas = () => {
       description={description}
       beginning={beginning}
       sections={sections}
+      italicize={true}
+      imageLink={{ image: MainPhoto }}
     />
   );
 };

@@ -9,10 +9,10 @@ const StyledLink = styled.a`
   }
 `;
 
-export const StyledA = ({ link, label }) => {
+export const StyledA = ({ link, children }) => {
   return (
     <StyledLink href={link} target="_blank">
-      {label}
+      {children}
     </StyledLink>
   );
 };

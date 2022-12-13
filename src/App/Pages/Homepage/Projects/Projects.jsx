@@ -3,9 +3,8 @@ import { ProjectCard } from "./ProjectCard/ProjectCard";
 
 // Images
 import DevelopmentImg from "../../../../assets/calisthenics-pal.png";
-import PersonasImg from "../../../../assets/personas-storyboarding.png";
+import PersonasImg from "../../../../assets/personas.png";
 import RedesignImg from "../../../../assets/responsive-redesign.png";
-import IterativeImg from "../../../../assets/iterative-design.png";
 
 const StyledProjects = styled.div`
   /* min-height: 100vh; */
@@ -21,25 +20,25 @@ const ProjectsContainer = styled.div`
 
 const projects = [
   {
-    name: "Studying Interactions through a Library Printer",
+    name: "UI/UX Principles in Everyday Objects",
     description: "",
     link: "https://poopycat420.github.io/personas-storyboards/",
     image: PersonasImg,
-    path: '/personas#top',
+    path: '/personas',
   },
   {
     name: "Williamsburg Urgent Care Redesign",
     description: "",
     link: "https://poopycat420.github.io/responsive-redesign/",
     image: RedesignImg,
-    path: '/redesign#top',
+    path: '/redesign',
   },
   {
     name: "Calisthenics Pal",
     description: "",
     link: "https://poopycat420.github.io/calisthenics-pal/",
     image: DevelopmentImg,
-    path: '/calisthenics-pal#top',
+    path: '/calisthenics-pal',
   },
 ];
 // https://github.com/sleepysloth123/iterative
