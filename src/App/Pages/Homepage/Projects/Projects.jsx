@@ -25,27 +25,22 @@ const projects = [
     description: "",
     link: "https://poopycat420.github.io/personas-storyboards/",
     image: PersonasImg,
-    path: '/personas',
+    path: '/personas#top',
   },
   {
     name: "Williamsburg Urgent Care Redesign",
     description: "",
     link: "https://poopycat420.github.io/responsive-redesign/",
     image: RedesignImg,
-    path: '/redesign',
+    path: '/redesign#top',
   },
   {
     name: "Calisthenics Pal",
     description: "",
     link: "https://poopycat420.github.io/calisthenics-pal/",
     image: DevelopmentImg,
+    path: '/calisthenics-pal#top',
   },
-  {
-    name: "Designing a Startup Interface",
-    description: "",
-    link: "https://sleepysloth123.github.io/iterative/",
-    image: IterativeImg,
-  }
 ];
 // https://github.com/sleepysloth123/iterative
 

@@ -20,14 +20,14 @@ const StyledLanding = styled.div`
   align-items: center;
   background-color: ${(props) => props.theme.color1};
   color: ${(props) => props.theme.color4};
-  padding: 10%;
+  padding: 10% 5vw;
 `;
 
 // sections => [{ label: string, id: string, element, }]
 // beginning => { label: string, id: string }
 export const SidebarLayout = ({ title, description, sections, beginning }) => {
   return (
-    <LayoutGrid>
+    <LayoutGrid id="top">
       <Sidebar
         navLinks={[beginning].concat(
           sections.map((section) => ({
@@ -40,16 +40,14 @@ export const SidebarLayout = ({ title, description, sections, beginning }) => {
         <StyledLanding id={beginning.id}>
           <div>
             <h1>{title}</h1>
-            <p>{description}</p>
+            <p style={{ fontStyle: "italic" }}>{description}</p>
           </div>
         </StyledLanding>
-        {sections.map((section, index) => {
-          console.log(section);
-          return <PageSection key={index} id={section.id}>
+        {sections.map((section, index) => (
+          <PageSection key={index} id={section.id}>
             {section.element}
           </PageSection>
-        }
-        )}
+        ))}
       </StyledMain>
     </LayoutGrid>
   );

@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+
+import Avatar from '../../../assets/avatar.png';
 
 const StyledSidebar = styled.div`
   height: 100%;
@@ -14,6 +17,7 @@ const SidebarInnerContainer = styled.div`
   position: sticky;
   top: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
@@ -33,11 +37,18 @@ const NavLink = styled.div`
   transition: background-color 0.5s, color 0.5s;
 `;
 
+const AvatarImg = styled.img`
+  height: 30vh;
+  padding: 10%;
+`
+
 export const Sidebar = ({ navLinks }) => {
-    console.log(navLinks);
   return (
     <StyledSidebar>
       <SidebarInnerContainer>
+        <Link to="/" onClick={() => window.scrollTo(0,0)}>
+          <AvatarImg src={Avatar} />
+        </Link>
         <NavList>
           {navLinks.map(({ label, id }) => (
             <a href={"#" + id} key={id}>

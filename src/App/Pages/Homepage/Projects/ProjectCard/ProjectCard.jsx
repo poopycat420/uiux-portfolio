@@ -3,6 +3,10 @@ import styled from "styled-components";
 
 const BORDER_RADIUS = "30px";
 
+const scrollToTop = () => {
+  window.scrollTo(0, 0)
+}
+
 const StyledProjectCard = styled.div`
   max-width: 30vw;
 `;
@@ -30,7 +34,7 @@ export const ProjectCard = ({ name, description, link, image, path }) => {
   return (
     <StyledProjectCard>
       {path ? (
-        <Link to={path}>
+        <Link onClick={scrollToTop} to={path}>
           <CardImage src={image} />
         </Link>
       ) : (

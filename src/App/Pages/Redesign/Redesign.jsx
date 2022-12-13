@@ -26,17 +26,27 @@ const PrototypeImg = styled.img`
 `;
 
 const title = "Giving Williamsburg Urgent Care a Makeover";
-const description = `
-Have you ever looked up a business and been surprised by how hard it
-is to use their website? This is exactly what happened when I looked
-up a local urgent care center in Williamsburg. I'll be going through
-the process of me creating a new design for the page, including the
-issues I identified, the prototypes I created, and the final design
-for a new homepage I coded in pure HTML/CSS.
-`;
-const beginning = { label: "intro", id: "intro" };
+const description = "How can redesigning sites restore power back to users?";
+const beginning = { label: "top", id: "top" };
 
 const sections = [
+  {
+    label: "motivation",
+    id: "motivation",
+    element: (
+      <>
+        <h1>Motivation</h1>
+        <p>
+          Have you ever looked up a business and been surprised by how hard it
+          is to use their website? This is exactly what happened when I looked
+          up a local urgent care center in Williamsburg. I'll be going through
+          the process of me creating a new design for the page, including the
+          issues I identified, the prototypes I created, and the final design
+          for a new homepage I coded in pure HTML/CSS.
+        </p>
+      </>
+    ),
+  },
   {
     label: "the original site",
     id: "original-site",
@@ -86,10 +96,10 @@ const sections = [
           <br />
 
           <p>
-            Going a step further, I put the website into{' '}
+            Going a step further, I put the website into{" "}
             <a href="https://wave.webaim.org/">WAVE</a> (web accessibility
-            evaluation tool) to identify{' '}
-            <strong>accessibility problems</strong>:
+            evaluation tool) to identify <strong>accessibility problems</strong>
+            :
           </p>
           <ul>
             <li>
@@ -251,7 +261,7 @@ const sections = [
     ),
   },
   {
-    label: "coding the redesign",
+    label: "the final redesign",
     id: "redesign-final",
     element: (
       <>
@@ -265,7 +275,10 @@ const sections = [
           You can click the screenshot below to visit the site!
         </p>
 
-        <a href="https://poopycat420.github.io/redesigned-page/" target="_blank">
+        <a
+          href="https://poopycat420.github.io/redesigned-page/"
+          target="_blank"
+        >
           <ImageContainer image={FinalSite} />
         </a>
       </>

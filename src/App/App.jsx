@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Homepage } from "./Pages/Homepage/Homepage";
 import { Personas } from "./Pages/Personas/Personas";
 import { Redesign } from "./Pages/Redesign/Redesign";
+import { Development } from "./Pages/Development/Development";
 
 const theme = {
   color1: "#F9F7F7",
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Themed element={<Homepage />} />} />
         <Route path="/personas" element={<Themed element={<Personas />} />} />
         <Route path="/redesign" element={<Themed element={<Redesign />} />} />
+        <Route path="/calisthenics-pal" element={<Themed element={<Development />} />} />
       </Routes>
     </BrowserRouter>
   );

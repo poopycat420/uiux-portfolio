@@ -8,15 +8,8 @@ import Persona2 from "./images/persona-2.png";
 import Storyboard from "./images/storyboard.png";
 
 const title = "Studying User Stories through Printers";
-const description = `Empathizing with users is a crucial part of the design process, even
-for everyday interfaces like washing machines and microwaves. In
-Brown University's Sciences Library (better known as the SciLi), the
-printers available can be used as an example of a user-facing
-interface from which we can conduct research as well as create
-personas and storyboards. The following page walks through an
-exercise in understanding users and their relationships to the
-printers.`;
-const beginning = { label: "intro", id: "intro" };
+const description = "How can we understand users through everyday interfaces?";
+const beginning = { label: "top", id: "top" };
 
 const ImageContainer = styled.div`
   display: flex;
@@ -26,7 +19,29 @@ const ImageContainer = styled.div`
   padding: 1rem;
 `;
 
+const PersonaImg = styled.img`
+  max-height: 70vh;
+`
 const sections = [
+  {
+    label: "motivation",
+    id: "motivation",
+    element: (
+      <>
+      <h1>Motivation</h1>
+      <p>
+      Empathizing with users is a crucial part of the design process, even
+for everyday interfaces like washing machines and microwaves. In
+Brown University's Sciences Library (better known as the SciLi), the
+printers available can be used as an example of a user-facing
+interface from which we can conduct research as well as create
+personas and storyboards. The following page walks through an
+exercise in understanding users and their relationships to the
+printers.
+      </p>
+      </>
+    )
+  },
   {
     label: "a closer look",
     id: "closer-look",
@@ -40,9 +55,7 @@ const sections = [
           from the tray.
         </p>
         <ImageContainer>
-          <div>
             <img id="diagram-img" src={PrinterDiagram} />
-          </div>
         </ImageContainer>
       </>
     ),
@@ -156,7 +169,7 @@ const sections = [
           </p>
           <div class="persona-container">
             <ImageContainer>
-              <img class="persona-img" src={Persona1} />
+              <PersonaImg class="persona-img" src={Persona1} />
             </ImageContainer>
             <p>
               Stressed Sam is a senior at Brown University and also a TA for an
@@ -177,7 +190,7 @@ const sections = [
           </div>
           <div class="persona-container">
             <ImageContainer>
-              <img class="persona-img" src={Persona2} />
+              <PersonaImg class="persona-img" src={Persona2} />
             </ImageContainer>
             <p>
               Energetic Emily is a freshman at Brown University. She is very
